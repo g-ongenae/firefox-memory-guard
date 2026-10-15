@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "Memory Guard",
+  "version": "1.0.0",
+  "description": "Warns inside the page when a tab's process uses too much memory, and offers to unload or close it.",
+  "browser_specific_settings": {
+    "gecko": { "id": "memory-guard@local", "strict_min_version": "115.0" }
+  },
+  "permissions": ["tabs", "<all_urls>", "storage", "notifications"],
+  "background": { "scripts": ["background.js"], "persistent": true },
+  "browser_action": {
+    "default_title": "Memory Guard",
+    "default_icon": "icon.svg",
+    "default_popup": "popup.html"
+  },
+  "icons": { "48": "icon.svg", "96": "icon.svg" },
+  "experiment_apis": {
+    "processMemory": {
+      "schema": "experiment/schema.json",
+      "parent": {
+        "scopes": ["addon_parent"],
+        "paths": [["processMemory"]],
+        "script": "experiment/parent.js"
+      }
+    }
+  }
+}

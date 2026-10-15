@@ -1,0 +1,15 @@
+[
+  {
+    "namespace": "processMemory",
+    "description": "Per-tab memory usage, read from Firefox's process info (same source as about:processes).",
+    "functions": [
+      {
+        "name": "getTabMemory",
+        "type": "function",
+        "async": true,
+        "description": "Returns { totalBytes, tabs: [{ tabId, processes: [{ pid, memory, origin, tabCount }] }] }.",
+        "parameters": []
+      }
+    ]
+  }
+]
