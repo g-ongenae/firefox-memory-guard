@@ -12,3 +12,7 @@ There are two versions, because regular Firefox gives extensions no way to read 
 
 Regular Firefox rejects the extension as "corrupt" because it uses `experiment_apis`.
 Use the `autoconfig/` version there. Each folder's README has install steps.
+
+## License
+
+[MIT](LICENSE)
